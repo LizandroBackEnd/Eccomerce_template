@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles', 
     'rest_framework', 
-    'eccomerce',
+    'eccomerce', 
+    'coreapi',
 ] 
  
 REST_FRAMEWORK = { 
@@ -49,6 +50,10 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [ 
         'rest_framework.permissions.IsAuthenticated',
     ],
+} 
+ 
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
 }
 
 MIDDLEWARE = [
